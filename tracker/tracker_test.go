@@ -8,7 +8,8 @@ import (
 
 func TestTrack(t *testing.T) {
 	tck := Color{color: "red"}
-	tracked, err := tck.Track()
+	img := image.NewRGBA(image.Rect(0, 0, 10, 10))
+	tracked, err := tck.Track(img)
 	if err != nil {
 		t.Error("Expected nil, got ", err)
 	}

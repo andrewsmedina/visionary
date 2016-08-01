@@ -8,6 +8,6 @@ type Color struct {
 }
 
 // Track return a image.Rectangle with tracked area
-func (t *Color) Track() (image.Rectangle, error) {
+func (t *Color) Track(img image.Image) (image.Rectangle, error) {
 	return image.Rect(0, 0, 0, 0), nil
 }
